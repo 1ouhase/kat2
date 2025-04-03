@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User - RaceKatteKlubben</title>
+    <link rel="stylesheet" href="styleSheet.css">
+</head>
+<body>
+    <div class="topbar">
+        <a href="/cat"><button>Back to Cats</button></a>
+    </div>
+
+    <div class="content">
+        <div class="item">
+            <h1>Rediger Kat</h1>
+            <form action="/updateUser" method="POST">
+                <p for="name">Navn:</p>
+                <input type="text" id="name" name="name" placeholder="Indtast nyt navn" required>
+                <br>
+                <p for="race">Race:</p>
+                <input type="text" id="race" name="race" placeholder="Indtast Race" required>
+                <br>
+                <p for="race">Alder:</p>
+                <input type="text" id="alder" name="alder" placeholder="Indtast alder" required>
+                <br>
+                <button type="submit">Gem Ændringer</button>
+                <button type="submit">Slet kat</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

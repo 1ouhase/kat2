@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users - RaceKatteKlubben</title>
+    <link rel="stylesheet" href="styleSheet.css">
+</head>
+
+<body>
+    <div class="topbar">
+        <a href="/index"><button>Back to Home</button></a>
+    </div>
+
+    <div class="content">
+        <div class="item">
+            <h1>Vores Brugere</h1>
+            <p>Her er en liste over nogle af vores fantastiske medlemmer:</p>
+        </div>
+        <div class="item">
+            <div class="user" th:each="user : ${users}">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small_2x/default-avatar-icon-of-social-media-user-vector.jpg"
+                    alt="User Image">
+                <h2 th:text="${user.getName}">Placeholder</h2>
+                <h2 th:text="${user.getEmail}">bing@bong.com</h2>
+                <p>I love Cats <3</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

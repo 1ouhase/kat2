@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styleSheet.css">
+</head>
+
+<body>
+    <div class="topbar">
+        <a href="/index"><button>Back to Home</button></a>
+    </div>
+
+    <div class="content">
+        <div class="item">
+            <h1>Login</h1>
+            <div>
+                <form th:action="@{/login}" method="POST">
+                    <div th:if="${param.error}">
+                        Invalid username and password.
+                    </div>
+                    <input type="text" id="username" name="username" required placeholder="Username">
+                    <br>
+                    <input type="password" id="password" name="password" required placeholder="Password">
+                    <div class="flexbox">
+                        <a href="">Forgot password?</a>
+                    </div>
+                    <button type="submit" value="Sign in">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User - RaceKatteKlubben</title>
+    <link rel="stylesheet" href="styleSheet.css">
+</head>
+<body>
+    <div class="topbar">
+        <a href="/admin"><button>Back to Admin</button></a>
+    </div>
+
+    <div class="content">
+        <div class="item">
+            <h1>Rediger Bruger</h1>
+            <form action="/updateUser" method="POST">
+                <p for="username">Brugernavn:</p>
+                <input type="text" id="username" name="username" placeholder="Indtast nyt brugernavn" required>
+                <p for="email">Email:</p>
+                <input type="email" id="email" name="email" placeholder="Indtast ny email" required>
+                <p for="password">Password:</p>
+                <input type="text" id="password" name="password" placeholder="Indtast nyt password" required>
+                <br>
+                <button type="submit">Gem Ændringer</button>
+                <button type="submit">Slet bruger</button>
+                <select name="roles" id="roles">
+                    <option value="admin">admin</option>
+                    <option value="user">user</option>
+                    <option value="owner">guest</option>
+                </select>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

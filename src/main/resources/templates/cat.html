@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats - RaceKatteKlubben</title>
+    <link rel="stylesheet" href="styleSheet.css">
+</head>
+<body>
+    <div class="topbar">
+        <a href="/index"><button>Back to Home</button></a>
+    </div>
+
+    <div class="content">
+        <div class="item">
+            <h1>Vores Katte</h1>
+            <p>Her er en liste over nogle af vores fantastiske katte:</p>
+        </div>
+        <div class="item">
+            <div class="cat" th:each="cat:${cats}">
+                <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=pexels-pixabay-104827.jpg&fm=jpg" alt="Cat Image">
+                <h2 th:text="${cat.getName()}">placeholder</h2>
+                <h2 th:text="${cat.getRace()}">placeholder</h2>
+                <h2 th:text="${cat.getAge()}">placeholder</h2>
+            </div>
+        </div>
+        <div class="item">
+            <h2>Del dine katte med os</h2>
+            <p>Vil du også dele dine katte med RaceKatteKlubben? Tilføj din kat nu!</p>
+            <a href="login.html"><button>Tilføj kat</button></a>
+        </div>
+    </div>
+</body>
+</html>

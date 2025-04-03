@@ -1,0 +1,209 @@
+.topbar {
+    display: flex;;
+    justify-content: right;
+    margin: 5px;
+    border-radius: 4px;
+    background-color: #2c3e50;
+    padding: 10px;
+    position: sticky;
+    box-shadow: 2px 4px 4px rgb(0, 0, 0, 0.5);
+    top: 0;
+}
+.topbar button {
+    background-color: #2ecc71;
+    margin: 0px 5px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 2px 4px 4px rgb(0, 0, 0, 0.5);
+}
+.topbar button:hover {
+    background-color: #23ae60;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+}
+.content button {
+    background-color: #2ecc71;
+    margin: 0px 5px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 2px 4px 4px rgb(0, 0, 0, 0.5);
+}
+.content button:hover {
+    background-color: #23ae60;
+}
+.item {
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 4px;
+    margin: 20px 0;
+    width: 60%;
+    box-shadow: 2px 4px 4px rgb(0, 0, 0, 0.5);
+}
+.item input {
+    width: 20%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 2px 4px 4px rgb(0, 0, 0, 0.5);
+    margin-top: 15px;
+}
+.item button{
+    background-color: #2ecc71;
+    margin: 0px 5px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 2px 4px 4px rgb(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+.item select {
+    background-color: #2ecc71;
+    width: 10%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 2px 4px 4px rgb(0, 0, 0, 0.5);
+    margin-top: 15px;
+}
+.item option {
+    background-color: #eeeeee;
+    color: #000000;
+}
+.item img {
+    width: 60%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+.flexbox {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-wrap: wrap;
+}
+.user{
+    display: flex;
+    background-color: #34495e;
+    border-radius: 4px;
+    height: 80px;
+    margin: 10px;
+    box-shadow: 1px 2px 4px rgb(0, 0, 0, 0.5);
+}
+.user img{
+    margin: 15px;
+    width: 50px;
+    height: 50px;
+}
+.user h2{
+    color: #eeeeee;
+    width: calc((100% - 80px) / 3);
+    text-align: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+}
+.admin button{
+    height: 50px !important;
+}
+.user p{
+    font-family: Arial, sans-serif;
+    color: #eeeeee;
+    margin-left: 10px;
+}
+.cat{
+    display: flex;
+    background-color: #34495e;
+    border-radius: 4px;
+    height: 80px;
+    margin: 10px;
+    box-shadow: 1px 2px 4px rgb(0, 0, 0, 0.5);
+}
+.cat img{
+    margin: 15px;
+    width: 50px;
+    height: 50px;
+}
+.cat h2{
+    color: #eeeeee;
+    width: calc((100% - 80px) / 3);
+    text-align: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+}
+.admin{
+    display: flex;
+    background-color: #34495e;
+    border-radius: 4px;
+    height: 80px;
+    margin: 10px;
+    box-shadow: 1px 2px 4px rgb(0, 0, 0, 0.5);
+    align-items: center;
+}
+.admin img{
+    margin: 15px;
+    width: 50px;
+    height: 50px;
+}
+.admin h2{
+    color: #eeeeee;
+    width: calc((100% - 80px) / 3);
+    text-align: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+}
+.admin p{
+    font-family: Arial, sans-serif;
+    color: #eeeeee;
+    margin-left: 10px;
+}
+.admin button {
+    background-color: #2ecc71;
+    margin: 0px 5px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-left: 15%;
+    cursor: pointer;
+    box-shadow: 2px 4px 4px rgb(0, 0, 0, 0.5);
+}
+.admin a{
+    margin: 0px 5px;
+    padding: 10px 20px;
+    margin-left: 15%;
+    cursor: pointer;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #34495e;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    color: #2ecc71;
+    margin-left: 10px;
+}
+h2 {
+    color: #2ecc71;
+    margin-left: 10px;
+}
+p {
+    font-family: Arial, sans-serif;
+    color: #2ecc71;
+    margin-left: 10px;
+}
+a {
+    color: #9b59b6;
+    text-decoration: none;
+}
