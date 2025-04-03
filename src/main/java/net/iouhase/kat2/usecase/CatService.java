@@ -1,7 +1,7 @@
-package net.iouhase.kat.usecase;
+package net.iouhase.kat2.usecase;
 
-import net.iouhase.kat.adapters.CatRepository;
-import net.iouhase.kat.model.Cat;
+import net.iouhase.kat2.adapters.CatRepository;
+import net.iouhase.kat2.model.Cat;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

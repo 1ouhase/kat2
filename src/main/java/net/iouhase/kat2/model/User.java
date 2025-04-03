@@ -1,4 +1,4 @@
-package net.iouhase.kat.model;
+package net.iouhase.kat2.model;
 
 public class User {
     private int id;

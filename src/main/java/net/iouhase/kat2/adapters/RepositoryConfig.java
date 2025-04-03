@@ -1,4 +1,4 @@
-package net.iouhase.kat.adapters;
+package net.iouhase.kat2.adapters;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

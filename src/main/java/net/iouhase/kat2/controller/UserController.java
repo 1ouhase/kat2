@@ -1,7 +1,7 @@
-package net.iouhase.kat.controller;
+package net.iouhase.kat2.controller;
 
-import net.iouhase.kat.model.User;
-import net.iouhase.kat.usecase.UserService;
+import net.iouhase.kat2.model.User;
+import net.iouhase.kat2.usecase.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

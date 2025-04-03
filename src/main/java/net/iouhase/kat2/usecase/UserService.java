@@ -1,8 +1,7 @@
-package net.iouhase.kat.usecase;
+package net.iouhase.kat2.usecase;
 
-import net.iouhase.kat.adapters.UserRepository;
-import net.iouhase.kat.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import net.iouhase.kat2.adapters.UserRepository;
+import net.iouhase.kat2.model.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

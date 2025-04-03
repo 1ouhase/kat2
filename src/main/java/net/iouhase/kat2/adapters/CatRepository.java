@@ -1,6 +1,6 @@
-package net.iouhase.kat.adapters;
+package net.iouhase.kat2.adapters;
 
-import net.iouhase.kat.model.Cat;
+import net.iouhase.kat2.model.Cat;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
