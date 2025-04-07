@@ -1,6 +1,6 @@
 package net.iouhase.kat2.model;
 
-public class Cat {
+public class Cat{
     private int id;
     private int owner;
     private String name;

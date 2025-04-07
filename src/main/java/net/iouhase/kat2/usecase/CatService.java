@@ -19,7 +19,7 @@ public class CatService {
     }
 
     public Cat findById(Cat cat) {
-        return catRepository.findByID(cat);
+        return catRepository.findById(cat);
     }
 
     public List<Cat> findAll() {
