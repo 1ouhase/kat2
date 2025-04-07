@@ -26,7 +26,7 @@ public class CatRepository {
     }
 
     public List<Cat> findAll() {
-        String sql = "SELECT id, owner, name, race, age FROM kats ORDER BY id DESC";
+        String sql = "SELECT * FROM kats";
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Cat.class));
     }
 
