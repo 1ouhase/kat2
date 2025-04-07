@@ -27,7 +27,9 @@ public class UserController {
         return "user";
     }
     @GetMapping("/admin")
-    public String admin() {
+    public String admin(Model model) {
+        List<User> users = userService.findAll();
+        model.addAttribute("users", users);
         return "admin";
     }
     @GetMapping("/editUser")
@@ -37,5 +39,9 @@ public class UserController {
     @GetMapping("/editUserAdmin")
     public String editUserAdmin() {
         return "editUserAdmin";
+    }
+    @GetMapping("/addUser")
+    public String addUser() {
+        return "addUser";
     }
 }

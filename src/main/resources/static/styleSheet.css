@@ -141,6 +141,22 @@
     margin: 0;
     padding: 0;
 }
+.cat button {
+    background-color: #2ecc71;
+    margin: 0px 5px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-left: 15%;
+    cursor: pointer;
+    box-shadow: 2px 4px 4px rgb(0, 0, 0, 0.5);
+}
+.cat a{
+    margin: 0px 5px;
+    padding: 10px 20px;
+    margin-left: 15%;
+    cursor: pointer;
+}
 .admin{
     display: flex;
     background-color: #34495e;

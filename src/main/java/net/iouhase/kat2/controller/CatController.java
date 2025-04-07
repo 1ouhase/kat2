@@ -26,4 +26,8 @@ public class CatController {
     public String editCat() {
         return "editCat";
     }
+    @GetMapping("/addCat")
+    public String addCat() {
+        return "addCat";
+    }
 }
