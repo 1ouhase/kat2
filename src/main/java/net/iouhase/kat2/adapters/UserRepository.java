@@ -27,6 +27,11 @@ public class UserRepository implements RepositoryItf<User> {
         return jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<>(User.class), user.getId());
     }
 
+    public List<User> findByLogin(User user) {
+        String sql = "SELECT * FROM users WHERE name = ? and password = ?";
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(User.class), user.getName(), user.getPassword());
+    }
+
     @Override
     public List<User> findAll(){
         String sql = "SELECT * FROM users";

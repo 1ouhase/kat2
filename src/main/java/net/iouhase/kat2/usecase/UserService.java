@@ -35,6 +35,7 @@ public class UserService {
     }
 
     public boolean isValidUser(User user) {
-        return true;
+        List<User> users = userRepository.findByLogin(user);
+        return !users.isEmpty();
     }
 }

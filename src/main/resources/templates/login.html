@@ -18,13 +18,16 @@
             <div class="login-form">
                 <h1>Login</h1>
                 <form action="/login/post" method="post">
+                    <div th:if="${loginError}" class="alert">
+                        wrong username or password
+                    </div>
                     <input type="text" id="username" name="username" required placeholder="Username">
                     <br>
                     <input type="password" id="password" name="password" required placeholder="Password">
                     <div class="flexbox">
                         <a href="">Forgot password?</a>
                     </div>
-                    <button type="submit" value="Sign in">Login</button>
+                    <button type="submit" value="Sign in" style="margin-bottom: 25px;">Login</button>
                 </form>
             </div>
         </div>

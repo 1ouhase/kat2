@@ -53,7 +53,6 @@
     padding: 10px;
     border-radius: 4px;
     border: none;
-    box-shadow: 2px 4px 4px rgb(0, 0, 0, 0.5);
     margin-top: 15px;
 }
 .item button{
@@ -63,7 +62,6 @@
     border-radius: 4px;
     padding: 10px 20px;
     cursor: pointer;
-    box-shadow: 2px 4px 4px rgb(0, 0, 0, 0.5);
     margin-top: 20px;
 }
 .item select {
@@ -204,11 +202,18 @@
     flex-direction: column;
     background-color: #34495e;
     border-radius: 4px;
-    height: 300px;
     width: 250px;
     margin: 10px;
     box-shadow: 1px 2px 4px rgb(0, 0, 0, 0.5);
     align-items: center;
+}
+.login-form a{
+    margin-top: 10px;
+    margin-left: 25px;
+}
+.alert{
+    background-color: red;
+    margin: 0 25px;
 }
 body {
     font-family: Arial, sans-serif;
