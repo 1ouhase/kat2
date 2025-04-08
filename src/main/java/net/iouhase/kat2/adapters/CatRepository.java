@@ -17,7 +17,7 @@ public class CatRepository implements RepositoryItf<Cat>{
 
     @Override
     public void save(Cat cat) {
-        String sql = "INSERT INTO kats (owner, name, race age) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO kats (owner, name, race, age) VALUES (?, ?, ?, ?)";
         jdbcTemplate.update(sql, cat.getOwner(), cat.getName(), cat.getRace(), cat.getAge());
     }
 

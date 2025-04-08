@@ -27,7 +27,7 @@ public class CatService {
     }
 
     public void update(Cat cat) {
-        catRepository.save(cat);
+        catRepository.update(cat);
     }
 
     public void delete(Cat cat) {
