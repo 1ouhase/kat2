@@ -33,4 +33,8 @@ public class UserService {
     public void delete(User user) {
         userRepository.delete(user);
     }
+
+    public boolean isValidUser(User user) {
+        return true;
+    }
 }
