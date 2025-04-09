@@ -14,18 +14,24 @@
     <div class="content">
         <div class="item">
             <h1>Rediger Kat</h1>
-            <form action="/cat" method="GET">
+            <form action="/cat" method="POST">
+                <p for="id">Id:</p>
+                <input type="number" id="id" name="id" placeholder="indtast id">
+                <br>
                 <p for="name">Navn:</p>
-                <input type="text" id="name" name="name" placeholder="Indtast nyt navn" required>
+                <input type="text" id="name" name="name" placeholder="Indtast nyt navn">
                 <br>
                 <p for="race">Race:</p>
-                <input type="text" id="race" name="race" placeholder="Indtast Race" required>
+                <input type="text" id="race" name="race" placeholder="Indtast Race">
                 <br>
                 <p for="race">Alder:</p>
-                <input type="text" id="alder" name="alder" placeholder="Indtast alder" required>
+                <input type="text" id="alder" name="alder" placeholder="Indtast alder">
                 <br>
                 <button type="submit">Gem Ændringer</button>
-                <button type="submit">Slet kat</button>
+                <form th:action="@{/deleteCat}">
+                    <input type="hidden" name="id" th:value="${}">
+                    <button type="submit">Delete Cat</button>
+                </form>
             </form>
         </div>
     </div>

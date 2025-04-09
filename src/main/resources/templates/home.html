@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaceKatteKlubben</title>
+    <link rel="stylesheet" href="styleSheet.css">
+</head>
+<body>
+<div class="topbar">
+    <a href="/login"><button>Login</button></a>
+</div>
+
+<div class="content">
+    <div class="item">
+        <h1>Velkommen (insert name here)</h1>
+        <p>Her er et overblik over dine katte</p>
+    </div>
+    <div class="item">
+        <div class="cat" th:each="cat:${cats}">
+            <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=pexels-pixabay-104827.jpg&fm=jpg" alt="Cat Image">
+            <h2 th:text="${cat.getName()}">placeholder</h2>
+            <h2 th:text="${cat.getRace()}">placeholder</h2>
+            <h2 th:text="${cat.getAge()}">placeholder</h2>
+            <a href="/editCat"><button>Edit cat</button></a>
+        </div>
+    </div>
+    <div class="item">
+        <h2>Om os</h2>
+        <p>Velkommen til RaceKatteKlubben – et hyggeligt og engageret fællesskab for alle, der elsker katte!💛 <br>
+            <br>
+            Hos os samles katteentusiaster fra hele landet for at dele viden, erfaringer og passionen for de mange skønne katteracer. Uanset om du er opdrætter, ejer, eller blot drømmer om at få en kat, er du velkommen hos os. <br>
+            <br>
+            Vi arbejder for at skabe et informativt og støttende miljø, hvor du kan finde råd om alt fra kattepleje og sundhed til udstillinger og avl. Gennem vores fællesskab kan du møde ligesindede, deltage i spændende arrangementer og lære endnu mere om din yndlingsrace. <br>
+            <br>
+            Bliv en del af RaceKatteKlubben og vær med til at fejre de fantastiske firbenede venner, der bringer os så meget glæde hver dag! 🐱✨</p>
+    </div>
+</div>
+</body>
+</html>
