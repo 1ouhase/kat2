@@ -5,7 +5,6 @@ import net.iouhase.kat2.model.Cat;
 import net.iouhase.kat2.model.User;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service

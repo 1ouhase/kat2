@@ -6,6 +6,7 @@ import org.springframework.jdbc.support.CustomSQLErrorCodesTranslation;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -44,5 +45,12 @@ public class UserController {
     @GetMapping("/addUser")
     public String addUser() {
         return "addUser";
+    }
+    @GetMapping("/home/{id}")
+    public String home(@PathVariable int id, Model model) {
+        User user = new User();
+        user.setId(id);
+        model.addAttribute("user", userService.findById(user));
+        return "home";
     }
 }

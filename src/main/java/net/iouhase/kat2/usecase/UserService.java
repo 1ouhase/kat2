@@ -18,7 +18,7 @@ public class UserService {
         userRepository.save(user);
     }
 
-    public User findByEmail(User user) {
+    public User findById(User user) {
         return userRepository.findById(user);
     }
 
@@ -34,8 +34,7 @@ public class UserService {
         userRepository.delete(user);
     }
 
-    public boolean isValidUser(User user) {
-        List<User> users = userRepository.findByLogin(user);
-        return !users.isEmpty();
+    public List<User> isValidUser(User user) {
+        return userRepository.findByLogin(user);
     }
 }
