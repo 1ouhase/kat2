@@ -22,7 +22,7 @@
                 <h2 th:text="${cat.getName()}">placeholder</h2>
                 <h2 th:text="${cat.getRace()}">placeholder</h2>
                 <h2 th:text="${cat.getAge()}">placeholder</h2>
-                <a href="/editCat"><button>Edit cat</button></a>
+                <a th:href="@{'/editCat/' + ${cat.getId()}}"><button>Edit cat</button></a>
             </div>
         </div>
         <div class="item">
