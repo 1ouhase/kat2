@@ -18,8 +18,8 @@ public class CatRepository implements RepositoryItf<Cat>{
 
     @Override
     public void save(Cat cat) {
-        String sql = "INSERT INTO kats (owner, name, race, age) VALUES (?, ?, ?, ?)";
-        jdbcTemplate.update(sql, cat.getOwner(), cat.getName(), cat.getRace(), cat.getAge());
+        String sql = "INSERT INTO kats ( name, race, age) VALUES (?, ?, ?)";
+        jdbcTemplate.update(sql, cat.getName(), cat.getRace(), cat.getAge());
     }
 
     @Override
@@ -41,8 +41,8 @@ public class CatRepository implements RepositoryItf<Cat>{
 
     @Override
     public void update(Cat cat) {
-        String sql = "UPDATE kats SET owner = ?, name = ?, race = ?, age = ? WHERE id = ?";
-        jdbcTemplate.update(sql, cat.getOwner(), cat.getName(), cat.getRace(), cat.getAge());
+        String sql = "UPDATE kats SET name = ?, race = ?, age = ? WHERE id = ?";
+        jdbcTemplate.update(sql, cat.getName(), cat.getRace(), cat.getAge());
     }
 
     @Override
