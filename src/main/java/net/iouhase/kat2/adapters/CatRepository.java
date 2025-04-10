@@ -1,6 +1,7 @@
 package net.iouhase.kat2.adapters;
 
 import net.iouhase.kat2.model.Cat;
+import net.iouhase.kat2.model.User;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -31,6 +32,11 @@ public class CatRepository implements RepositoryItf<Cat>{
     public List<Cat> findAll() {
         String sql = "SELECT * FROM kats";
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Cat.class));
+    }
+
+    public List<Cat> findByOwner(User user){
+        String sql = "SELECT * FROM kats WHERE owner = ?";
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Cat.class), user.getId());
     }
 
     @Override
