@@ -68,11 +68,9 @@ public class UserController {
 
     @GetMapping("/deleteUser/{id}")
     public String deleteUser(@PathVariable int id) {
-        System.out.println("fuck dig stegemand");
         User user = new User();
         user.setId(id);
         userService.delete(user);
-        System.out.println(id);
         return "redirect:/admin";
     }
 
