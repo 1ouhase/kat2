@@ -35,6 +35,6 @@ public class CatService {
         catRepository.delete(cat);
     }
     public List<Cat> findByOwner(User user) {
-        return findAll();
+        return catRepository.findByOwner(user);
     }
 }

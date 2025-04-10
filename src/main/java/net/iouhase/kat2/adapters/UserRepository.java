@@ -46,7 +46,7 @@ public class UserRepository implements RepositoryItf<User> {
 
     @Override
     public void delete(User user) {
-        String sql = "DELETE FROM users WHERE email = ?";
-        jdbcTemplate.update(sql, user.getEmail());
+        String sql = "DELETE FROM users WHERE id = ?";
+        jdbcTemplate.update(sql, user.getId());
     }
 }

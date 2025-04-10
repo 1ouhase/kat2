@@ -22,19 +22,26 @@ public class CatController {
         model.addAttribute("cats", cats);
         return "cat";
     }
+
+    @GetMapping("/myCats")
+    public String myCats(Model model) {
+        List<Cat> cats = catService.findAll();
+        model.addAttribute("cats", cats);
+        return "myCats";
+    }
+
     @GetMapping("/addCat")
-    public String addCat(@PathVariable int id, Model model) {
-        Cat cat = new Cat();
-        cat.setId(id);
-        model.addAttribute("cat", catService.findById(cat));
+    public String addCat() {
         return "addCat";
     }
+
     @GetMapping("/home")
     public String home(Model model) {
         List<Cat> cats = catService.findAll();
         model.addAttribute("cats", cats);
         return "home";
     }
+
     @GetMapping("/editCat/{id}")
     public String edit(@PathVariable int id, Model model) {
         Cat cat = new Cat();
@@ -50,6 +57,7 @@ public class CatController {
         catService.delete(cat);
         return "redirect:/cat";
     }
+
     @PostMapping("/saveCat/{id}")
     public String update(@RequestParam String name, @RequestParam String race, @RequestParam int alder, @PathVariable int id) {
         Cat cat = new Cat();
@@ -60,14 +68,15 @@ public class CatController {
         catService.update(cat);
         return "redirect:/cat";
     }
-    @PostMapping("/createCat/{id}")
-    public String create(@RequestParam String name, @RequestParam String race, @RequestParam int alder, @PathVariable int id) {
+
+    @PostMapping("/createCat")
+    public String create(@RequestParam String name, @RequestParam String race, @RequestParam int alder) {
         Cat cat = new Cat();
-        cat.setId(id);
         cat.setName(name);
         cat.setRace(race);
         cat.setAge(alder);
-        catService.update(cat);
+        cat.setOwner(2);
+        catService.save(cat);
         return "redirect:/cat";
     }
 }

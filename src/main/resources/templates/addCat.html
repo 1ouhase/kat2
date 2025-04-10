@@ -14,7 +14,7 @@
 <div class="content">
     <div class="item">
         <h1>Tilføj Kat</h1>
-        <form method="post" th:action="@{'/saveCat/' +  ${cat.getId()}}">
+        <form method="post" th:action="@{'/createCat'}">
             <p for="name">Navn:</p>
             <input type="text" id="name" name="name" placeholder="Indtast nyt navn" required>
             <br>
@@ -22,7 +22,7 @@
             <input type="text" id="race" name="race" placeholder="Indtast Race" required>
             <br>
             <p for="race">Alder:</p>
-            <input type="text" id="alder" name="alder" placeholder="Indtast alder" required>
+            <input type="number" id="alder" name="alder" placeholder="Indtast alder" required>
             <br>
             <button type="submit">Tilføj kat</button>
         </form>

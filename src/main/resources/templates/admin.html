@@ -11,7 +11,7 @@
 <body>
     <div class="topbar">
         <a href="/"><button>Back to Home</button></a>
-        <a href=""><button>Tilføj Bruger</button></a>
+        <a href="/addUser"><button>Tilføj Bruger</button></a>
     </div>
 
     <div class="content">
@@ -25,7 +25,7 @@
                      alt="User Image">
                 <h2 th:text="${user.getName}">Placeholder</h2>
                 <h2 th:text="${user.getEmail}">bing@bong.com</h2>
-                <a href="/editUser"><button>Edit user</button></a>
+                <a th:href="@{'/editUser/' + ${user.getId()}}"><button>Edit User</button></a>
             </div>
         </div>
     </div>
