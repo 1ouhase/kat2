@@ -2,6 +2,7 @@ package net.iouhase.kat2.controller;
 
 import net.iouhase.kat2.model.User;
 import net.iouhase.kat2.model.User;
+import net.iouhase.kat2.usecase.CatService;
 import net.iouhase.kat2.usecase.UserService;
 import org.springframework.jdbc.support.CustomSQLErrorCodesTranslation;
 import org.springframework.stereotype.Controller;
@@ -16,9 +17,11 @@ import java.util.List;
 @Controller
 public class UserController {
     private final UserService userService;
+    private final CatService catService;
 
-    public UserController(UserService userService) {
+    public UserController(UserService userService, CatService catService) {
         this.userService = userService;
+        this.catService = catService;
     }
 
     @GetMapping("/")
@@ -55,6 +58,7 @@ public class UserController {
         User user = new User();
         user.setId(id);
         model.addAttribute("user", userService.findById(user));
+        model.addAttribute("cats", catService.findAll());
         return "home";
     }
 
